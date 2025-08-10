@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HappyNewHome</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a href="index.html">
+                <img src="obrzaky/logo.jpg" alt="Logo" width="60" height="60" style="border-radius: 50%;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <!-- Jazykové prepínače -->
+                        <a class="nav-link active" href="#" id="flag-en" aria-current="page">
+                            <span class="fi fi-gb"></span>
+                        </a>
+                        <a class="nav-link active d-none" href="#" id="flag-sk" aria-current="page">
+                            <span class="fi fi-sk"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html" data-i18n="navbar_domov" id="nav-home">Domov</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="galeria.html" data-i18n="navbar_galeria" id="nav-gallery">Galéria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="okolie.html" data-i18n="navbar_galeria" id="nav-gallery">Okolie</a>
+                    </li>
+                    <li class="nav-item bg-success px-2 mx-2" style="border-radius: 20px;">
+                        <a class="nav-link text-white text-center" href="rezervacia.html" data-i18n="navbar_rezervovat">Rezervovať</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <section class="okolie p-5 bg-light">
+        <div class="text-center mb-4">
+            <h2 class="fw-bold" data-i18n="okolie_nadpis">Okolie</h2>
+            <p class="text-muted" data-i18n="okolie_podnadpis">Typy na vylet v okolí 30km</p> 
+        </div> 
+        <div>   
+            <div class="container text-center">
+                <div class="row align-items-center shadow-sm rounded bg-white overflow-hidden mb-4">
+                    <div class="col-md-6 p-4">
+                        <h3 class="fw-semibold" data-i18n="okolie_ski_nazov" >Ski Centrum Mraznica</h3>
+                        <p class="text-primary mb-1" data-i18n="okolie_ski_cas"><i class="bi bi-geo-alt-fill me-2"></i>3 min autom</p>
+                        <p data-i18n="okolie_ski_popis">Zažite pohodové lyžovanie v srdci prírody! Mraznica ponúka skvelé podmienky pre rodiny aj rekreačných lyžiarov, s krásnymi výhľadmi a občerstvením priamo pri svahu. V lete je svah ideálny na prechádzky či cyklovýlety.</p>
+                        <button type="button" data-i18n="okolie_viac_info" class="btn btn-outline-primary mt-3"
+                            onclick="window.open('https://www.google.com/maps/place/Horsk%C3%A1+chata+Mraznica/@48.8554725,20.5648191,433m/data=!3m2!1e3!4b1!4m6!3m5!1s0x473e4c4e10a1b019:0x5debd76bf202be4a!8m2!3d48.855469!4d20.567394!16s%2Fg%2F1trppkjj?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D', '_blank')">
+                            Viac info<i class="bi bi-arrow-right ms-1"></i>
+                        </button>
+                    </div>
+                    <div class="col-md-6 p-0">
+                        <img src="obrzaky/ski_centrummarznica.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Ski Centrum Mraznica">
+                    </div>
+                </div>
+
+                <!-- Palcmanská Maša -->
+                <div class="row align-items-center shadow-sm rounded bg-white overflow-hidden mb-4">
+                    <div class="col-md-6 p-0">
+                        <img src="obrzaky/palcmanska_masa.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Palcmanská Maša">
+                    </div>
+                    <div class="col-md-6 p-4">
+                        <h3 class="fw-semibold" data-i18n="okolie_palcmanska_nazov">Vodná nádrž Palcmanská Maša</h3>
+                        <p class="text-primary mb-1" data-i18n="okolie_palcmanska_cas"><i class="bi bi-geo-alt-fill me-2"></i>15 min autom</p>
+                        <p data-i18n="okolie_palcmanska_popis">Obľúbené miesto na letný relax – člnkovanie, kúpanie či piknik pri vode. V okolí sa nachádzajú reštaurácie aj cyklotrasy. Výborná voľba pre pokojný deň mimo civilizácie, obklopený krásnou prírodou Slovenského raja.</p>
+                        <button type="button" data-i18n="okolie_viac_info" class="btn btn-outline-primary mt-3"
+                            onclick="window.open('https://www.google.com/maps/place/Palcmansk%C3%A1+Ma%C5%A1a/@48.8608296,20.3684155,1865m/data=!3m2!1e3!4b1!4m6!3m5!1s0x473e4aaefb16148d:0x6879ccc4060d588c!8m2!3d48.8625727!4d20.380231!16s%2Fg%2F120j8l56?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D', '_blank')">
+                            Viac info<i class="bi bi-arrow-right ms-1"></i>
+                        </button>
+                    </div>    
+                </div>
+
+                <!-- Dobšinská ľadová jaskyňa -->
+                <div class="row align-items-center shadow-sm rounded bg-white overflow-hidden mb-4">
+                    <div class="col-md-6 p-4">
+                        <h3 class="fw-semibold" data-i18n="okolie_dobsinska_nazov">Dobšinská ľadová jaskyňa</h3>
+                        <p class="text-primary mb-1" data-i18n="okolie_dobsinska_cas">20 min autom</p>
+                        <p data-i18n="okolie_dobsinska_popis">Unikátna ľadová jaskyňa zapísaná v UNESCO. Obdivujte ľadové útvary, ktoré sa v jaskyni držia celoročne. Krátka prechádzka z parkoviska, ideálne aj pre deti. Skvelý tip na horúci letný deň!</p>
+                        <button type="button" data-i18n="okolie_viac_info" class="btn btn-outline-primary mt-3"
+                            onclick="window.open('https://www.google.com/maps/place/Dob%C5%A1insk%C3%A1+%C4%BDadov%C3%A1+Jasky%C5%88a,+049+71+Straten%C3%A1,+Slovensko/@48.8762564,20.2909257,932m/data=!3m2!1e3!4b1!4m6!3m5!1s0x473e34cee7a87b69:0xa00f7d44d2fe2a0!8m2!3d48.8761473!4d20.2965459!16s%2Fg%2F113qbmzpw?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D', '_blank')">
+                            Viac info<i class="bi bi-arrow-right ms-1"></i>
+                        </button>
+                    </div>
+                    <div class="col-md-6 p-0">
+                        <img src="obrzaky/ladova_jaskyna.webp" class="img-fluid w-100 h-100 object-fit-cover" alt="Demäňovská Jaskyňa">
+                    </div>
+                </div>
+
+                <!-- Slovenský raj – Čingov alebo Dedinky -->
+                <div class="row align-items-center shadow-sm rounded bg-white overflow-hidden mb-4">
+                    <div class="col-md-6 p-0">
+                        <img src="obrzaky/slovensky_raj.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Palcmanská Maša">
+                    </div>
+                    <div class="col-md-6 p-4">
+                        <h3 class="fw-semibold" data-i18n="okolie_slovenskyraj_nadpis">Slovenský raj – Čingov alebo Dedinky</h3>
+                        <p class="text-primary mb-1" data-i18n="okolie_slovenskyraj_cas"><i class="bi bi-geo-alt-fill me-2"></i>30 min autom</p>
+                        <p data-i18n="okolie_slovenskyraj_popis">Slovenský raj patrí medzi najkrajšie národné parky na Slovensku a jeho dve brány – Čingov a Dedinky – sú ako stvorené na celodenné objavovanie. Čingov ponúka množstvo trás vedúcich k tiesňavám ako Tomášovský výhľad, Prielom Hornádu či Suchá Belá. Naopak Dedinky sú ideálnym východiskovým bodom pre túry cez Zejmarskú roklinu až na Geravy. V lete si tu môžeš aj zaplávať alebo člnkovať na Palcmanskej Maši. Slovenský raj je rajom doslova – pre peších turistov, milovníkov adrenalínu aj pokojnej prírody.</p>
+                        <button type="button" data-i18n="okolie_viac_info" class="btn btn-outline-primary mt-3"
+                            onclick="window.open('https://www.google.com/maps/place/%C4%8Cingov,+centrum/@48.9418157,20.4311789,7447m/data=!3m1!1e3!4m11!1m3!2m2!1zxIxpbmdvdg!6e1!3m6!1s0x473e49fd1dfc28fb:0xdbbc5774224c512e!8m2!3d48.9418157!4d20.4821597!15sCgfEjGluZ292WgkiB8SNaW5nb3aSAQtoaWtpbmdfYXJlYZoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VOS01rbGxjVWhCRUFFqgE9EAEqCyIHxI1pbmdvdihEMh8QASIbHMcacEQPsAJmAzURvmyAxLWfJAf0z4aD9_2_MgsQAiIHxI1pbmdvduABAPoBBAgAEDU!16s%2Fg%2F11h6tbfgt3?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D', '_blank')">
+                            Viac info<i class="bi bi-arrow-right ms-1"></i>
+                        </button>
+                    </div>    
+                </div>
+
+                <!-- Grajnár – bežkárske trasy a výhľady -->
+                <div class="row align-items-center shadow-sm rounded bg-white overflow-hidden mb-4">
+                    <div class="col-md-6 p-4">
+                        <h3 class="fw-semibold" data-i18n="okolie_grajnar_nadpis">Grajnár – bežkárske trasy a výhľady</h3>
+                        <p class="text-primary mb-1" data-i18n="okolie_grajnar_cas">5 km od chaty</p>
+                        <p data-i18n="okolie_grajnar_popis">Sedlo Grajnár je obľúbeným miestom pre bežkárov zo širokého okolia. V zimnom období sa tu upravujú bežkárske trasy, ktoré vedú krásnou prírodou cez lesy a lúky Slovenského rudohoria. Miesto je ľahko dostupné autom a je ideálne pre všetkých – od začiatočníkov po skúsených milovníkov bežiek. Okrem športového vyžitia ťa potešia aj výhľady na Kráľovu hoľu či Volovské vrchy.</p>
+                       <button type="button" data-i18n="okolie_viac_info" class="btn btn-outline-primary mt-3"
+                            onclick="window.open('https://www.google.com/maps/place/Grajn%C3%A1r/@48.8602754,20.4891226,3730m/data=!3m2!1e3!4b1!4m6!3m5!1s0x473e4c9aa5614af7:0x3c82a90200ca3b44!8m2!3d48.8602778!4d20.5097222!16s%2Fg%2F120myt75?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D', '_blank')">
+                            Viac info<i class="bi bi-arrow-right ms-1"></i>
+                        </button>
+                    </div>
+                    <div class="col-md-6 p-0">
+                        <img src="obrzaky/grajnar.webp" class="img-fluid w-100 h-100 object-fit-cover" alt="Demäňovská Jaskyňa">
+                    </div>
+                </div>
+
+                <!-- Havraňia skala – Mlynky  -->
+                <div class="row align-items-center shadow-sm rounded bg-white overflow-hidden mb-4">
+                    <div class="col-md-6 p-0">
+                        <img src="obrzaky/havrania_skala.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Palcmanská Maša">
+                    </div>
+                    <div class="col-md-6 p-4">
+                        <h3 class="fw-semibold" data-i18n="okolie_havraniaskala_nadpis">Havrania skala – výhľady a ticho zimného Slovenského raja</h3>
+                        <p class="text-primary mb-1"><i class="bi bi-geo-alt-fill me-2" data-i18n="okolie_havraniaskala_cas"></i>25 min autom</p>
+                        <p data-i18n="okolie_havraniaskala_popis">Ak túžiš po pokoji, nádherných výhľadoch a zimnej turistike mimo masových trás, Havrania skala je ideálny tip. Nachádza sa neďaleko obce Stratená a vedie k nej značený turistický chodník cez lesy a planiny. Na vrchole 1 153 m n. m. ťa čaká úžasný panoramatický výhľad na Slovenský raj, Vysoké Tatry, Nízke Tatry a za jasného počasia až po Kráľovu hoľu. V zime býva chodník menej frekventovaný, takže si výlet užiješ v úplnom tichu a súzvuku s prírodou. Ideálne pre skúsenejších turistov so zimnou výbavou.</p>
+                        <button type="button" data-i18n="okolie_viac_info" class="btn btn-outline-primary mt-3"
+                            onclick="window.open('https://www.google.com/maps/place/Havrania+Skala/@48.85186,20.1621279,35489m/data=!3m1!1e3!4m6!3m5!1s0x473e3507ef3b5019:0xd4c8c897dd46f00c!8m2!3d48.89!4d20.3366667!16s%2Fg%2F120mhpd9?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D', '_blank')">
+                            Viac info<i class="bi bi-arrow-right ms-1"></i>
+                        </button>
+                    </div>    
+                </div>
+
+                <!-- Telgárt – lyže aj bežky -->
+                <div class="row align-items-center shadow-sm rounded bg-white overflow-hidden mb-4">
+                    <div class="col-md-6 p-4">
+                        <h3 class="fw-semibold" data-i18n="okolie_telgrat_nadpis">Telgárt – lyže aj bežky</h3>
+                        <p class="text-primary mb-1" data-i18n="okolie_telgrat_cas">25 min autom</p>
+                        <p data-i18n="okolie_telgrat_popis">Malebná obec Telgárt, ležiaca na pomedzí troch národných parkov (Nízke Tatry, Slovenský raj a Muránska planina), je skvelým zimným cieľom. V zime tu nájdeš lyžiarske stredisko s príjemnými svahmi vhodnými pre rodiny, začiatočníkov aj pokročilých. Okolie ponúka tiež množstvo bežkárskych trás s výhľadmi na Kráľovu hoľu a Horehronie. Ak hľadáš pokoj, čerstvý vzduch a zimnú prírodu ako z rozprávky, Telgárt je skvelou voľbou.</p>
+                        <button type="button" data-i18n="okolie_viac_info" class="btn btn-outline-primary mt-3"
+                            onclick="window.open('https://www.google.com/maps/place/Ski+Telg%C3%A1rt/@48.8507729,20.1863845,1865m/data=!3m1!1e3!4m10!1m2!2m1!1sly%C5%BEiarske+stredisko+bl%C3%ADzko+Telg%C3%A1rt,+Slovensko!3m6!1s0x473fccf9f83ab981:0xf655b78507095868!8m2!3d48.8496397!4d20.2046171!15sCjBsecW-aWFyc2tlIHN0cmVkaXNrbyBibMOtemtvIFRlbGfDoXJ0LCBTbG92ZW5za29aMSIvbHnFvmlhcnNrZSBzdHJlZGlza28gYmzDrXprbyB0ZWxnw6FydCBzbG92ZW5za2-SAQpza2lfcmVzb3J0mgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVJtTXpZemFUTjNSUkFCqgFzEAEqGCIUbHnFvmlhcnNrZSBzdHJlZGlza28oRDIgEAEiHC7vufDRqrpoYYKoJrmoO9lNEDiBk9-LDl8ZMp0yMxACIi9secW-aWFyc2tlIHN0cmVkaXNrbyBibMOtemtvIHRlbGfDoXJ0IHNsb3ZlbnNrb-ABAPoBBQiXAhA9!16s%2Fg%2F1tl4bt8w?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D', '_blank')">
+                            Viac info<i class="bi bi-arrow-right ms-1"></i>
+                        </button>
+                    </div>
+                    <div class="col-md-6 p-0">
+                        <img src="obrzaky/telgart.jpeg" class="img-fluid w-100 h-100 object-fit-cover" alt="Demäňovská Jaskyňa">
+                    </div>
+                </div>
+
+                <!-- Múzeum baníctva Gelnica -->
+                <div class="row align-items-center shadow-sm rounded bg-white overflow-hidden mb-4">
+                    <div class="col-md-6 p-0">
+                        <img src="obrzaky/gelnica.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Palcmanská Maša">
+                    </div>
+                    <div class="col-md-6 p-4">
+                        <h3 class="fw-semibold" data-i18n="okolie_gelnica_nadpis">Múzeum baníctva Gelnica</h3>
+                        <p class="text-primary mb-1" data-i18n="okolie_gelnica_cas"><i class="bi bi-geo-alt-fill me-2"></i>15km od chaty</p>
+                        <p data-i18n="okolie_gelnica_popis">Mesto Gelnica má bohatú banícku minulosť, ktorú krásne zachytáva Múzeum baníctva v centre mesta. Expozície sú umiestnené v historickej radnici a ponúkajú fascinujúci pohľad na dejiny ťažby zlata, striebra, medi i železa v tomto regióne. Okrem tradičných vitrín so vzácnymi minerálmi či náradím baníkov tu nájdeš aj zrekonštruovanú štôlňu, do ktorej môžeš vstúpiť a zažiť atmosféru podzemia na vlastnej koži. Skvelý výlet pre rodiny s deťmi aj fanúšikov techniky a histórie.</p>
+                        <button type="button" data-i18n="okolie_viac_info" class="btn btn-outline-primary mt-3"
+                            onclick="window.open('https://www.google.com/maps/place/Ban%C3%ADcke+m%C3%BAzeum/@48.851352,20.9306199,466m/data=!3m1!1e3!4m14!1m7!3m6!1s0x473ef920944c0259:0xaab0f431400ea263!2zQmFuw61ja2UgbcO6emV1bQ!8m2!3d48.851352!4d20.9331948!16s%2Fg%2F1thllvxq!3m5!1s0x473ef920944c0259:0xaab0f431400ea263!8m2!3d48.851352!4d20.9331948!16s%2Fg%2F1thllvxq?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D', '_blank')">
+                            Viac info<i class="bi bi-arrow-right ms-1"></i>
+                        </button>
+                    </div>    
+                </div>
+
+                
+
+            </div>
+
+            
+        </div>
+
+    </section>
+    <footer class="bg-dark text-light py-4">
+    <div class="container text-center">
+        <p class="mb-1">📍 Hnilčík, Slovenský raj | 📧 chatahappyhome@gmail.com | 📞 +421 987 654 321</p>
+        <ul class="nav justify-content-center mb-2">
+            <li class="nav-item"><a href="index.html" class="nav-link text-light px-2" data-i18n="footer_nav_home">Home</a></li>
+            <li class="nav-item"><a href="galeria.html" class="nav-link text-light px-2" data-i18n="footer_nav_gallery">Gallery</a></li>
+            <li class="nav-item"><a href="rezervacia.html" class="nav-link text-light px-2" data-i18n="footer_nav_rezervacia">Rezervovať</a></li>
+        </ul>
+        <div class="mb-2">
+            <a href="https://www.instagram.com/chata_happynewhome/" class="text-light me-3">
+                <i class="bi bi-instagram"></i>
+            </a>
+        </div>
+        <p class="mb-0 small">© 2025 HappyNewHome. All rights reserved.</p>
+    </div>
+</footer>
+
+     <script  src="lang.js"></script>
+</body>
+</html>

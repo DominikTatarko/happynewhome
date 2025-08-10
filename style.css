@@ -1,0 +1,61 @@
+/* Full-screen hero carousel */
+#heroCarousel {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-slide {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  color: white;
+}
+
+.carousel-caption h1 {
+  font-size: 3rem;
+}
+
+.carousel-caption p {
+  font-size: 1.5rem;
+}
+
+.gallery-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#lang-menu .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+#lang-menu .dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+
+
+@media (max-width: 768px) {
+  .carousel-caption h1 {
+    font-size: 2rem;
+  }
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}
