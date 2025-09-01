@@ -1,3 +1,6 @@
+html{
+  scroll-behavior: smooth;
+}
 /* Full-screen hero carousel */
 #heroCarousel {
   height: 100vh;
@@ -47,6 +50,29 @@
 
 #lang-menu .dropdown-item:hover {
   background-color: #f8f9fa;
+}
+
+.fade-in{
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards
+}
+
+.card-fadein {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.card-fadein.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+  
 }
 
 
