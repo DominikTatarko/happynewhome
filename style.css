@@ -1,14 +1,115 @@
 html{
   scroll-behavior: smooth;
 }
-/* Full-screen hero carousel */
+
+
+/* =========================
+   HERO + TRANSPARENT NAVBAR
+   ========================= */
+
+header {
+  position: relative;
+}
+
+.navbar-transparent{
+  background-color: transparent !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 1050 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 12px 25px;
+}
+
+.navbar-transparent .nav-link{
+  color: white !important;
+  font-weight: 500;
+}
+
+.navbar-transparent .nav-link:hover {
+  color: #d9eadb !important;
+}
+
+.navbar-transparent .navbar-toggler {
+  background-color: white !important;
+}
+
+.navbar-transprent .navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+
+.navbar .bg-success {
+    box-shadow:
+        0 0 6px rgba(255, 255, 255, 0.9),
+        0 0 15px rgba(255, 255, 255, 0.7),
+        0 0 25px rgba(255, 255, 255, 0.4);
+    color:white
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.navbar-brand:hover {
+    color: #198754 !important;
+}
+
+/* Hero carousel */
+#heroCarousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#heroCarousel .carousel-inner,
+#heroCarousel .carousel-item {
+    width: 100%;
+    height: 100vh;
+}
+
+#heroCarousel .hero-slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-reservation-btn {
+    border-radius: 20px;
+    box-shadow:
+        0 0 6px rgba(255, 255, 255, 0.9),
+        0 0 15px rgba(255, 255, 255, 0.7),
+        0 0 25px rgba(255, 255, 255, 0.4);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #heroCarousel,
+    #heroCarousel .carousel-inner,
+    #heroCarousel .carousel-item {
+        height: 100svh;
+    }
+}
+
+/* =========================
+  Full-screen hero carousel
+  ========================== */
+
 #heroCarousel {
   height: 100vh;
+  margin-bottom: 20px;
   overflow: hidden;
 }
 
 .hero-slide {
   height: 100vh;
+  min-height: 600px;
+  position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -19,7 +120,6 @@ html{
   top: 50%;
   transform: translateY(-50%);
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
   padding: 1rem 2rem;
   border-radius: 8px;
   color: white;
@@ -32,6 +132,212 @@ html{
 .carousel-caption p {
   font-size: 1.5rem;
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+    width: 80px;
+    height: 80px;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    opacity: 1 !important;
+
+    border: 2px solid white !important;
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px
+    
+}
+
+.carousel-control-prev-icon {
+    left: 25px;
+}
+
+/* Pravá šípka */
+.carousel-control-next-icon {
+    right: 25px;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+}
+
+.icon-style{
+  justify-self: center;
+  width: 50px;
+  height: 50px;
+  background-color:#c1edd9; 
+  border-radius: 50%; 
+  color: #198754; 
+  font-size: 1.5rem;
+  
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.25s ease;
+}
+
+.box-style{
+  border-radius: 20px; 
+  padding: 15px 5px 5px 0px; 
+  border: 1px solid lightgray;
+  height: 150px;
+  transition: all 0.25s ease;
+}
+
+
+.box-style:hover {
+  transform: scale(1.05) !important;
+  border-color: #198754 !important;
+  box-shadow: 0px 0px 20px rgba(46, 139, 87, 0.6) !important;
+}
+
+.box-style:hover .icon-style {
+    background-color: #198754;
+    
+    color: white;
+    transform: scale(1.1);
+}
+
+.box-style p {
+  font-size: 0.8rem;
+  
+}
+
+.box-style h4,
+.box-style p{
+  width:80%;
+  margin: 5px 0px 0px 20px;
+}
+
+.cenovka{
+  font-size: 1.8rem !important;
+  font-weight: 700;
+  color:#198754;
+}
+
+@media (max-width: 576px) {
+  .cenovka-box {
+    height: 230px !important;
+  }
+}
+
+
+
+.gallery-preview {
+    align-items: center;
+    background-color: #E3E3E3;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Animácia */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+
+/* Slider */
+.slider {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 300px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-1000px);
+    }
+}
+
+
+/* Ľavý gradient */
+.slider::before {
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    content: "";
+    height: 300px;
+    position: absolute;
+    width: 50px;
+    z-index: 2;
+    left: 0;
+    top: 0;
+}
+
+
+/* Pravý gradient */
+.slider::after {
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    content: "";
+    height: 300px;
+    position: absolute;
+    width: 50px;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+
+/* Pás s obrázkami */
+.slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: max-content;
+    height: 100%;
+    animation: scroll 20s linear infinite;
+}
+
+
+/* Jeden obrázok */
+.slide {
+    flex-shrink: 0;
+    height: 300px;
+    width: 300px;
+    
+}
+
+.slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================
+  Galeria
+  ========================== */
 
 .gallery-img {
     height: 200px;
@@ -68,6 +374,64 @@ html{
   transform: translateY(0);
 }
 
+/* =========================
+  Galeria Filter
+  ========================== */
+
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.gallery-button {
+    width: 100px;
+    padding: 8px 10px !important;
+    border-radius: 20px !important;
+    margin: 0 !important;
+}
+
+.gallery-checked {
+    background-color: #198754 !important;
+    color: white !important;
+
+    transform: scale(1.08);
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+
+    transition: all 0.2s ease;
+}
+
+
+/* =========================
+  Footer
+  ========================== */
+
+.f-reservacia-btn, .f-galeria-btn{
+  list-style: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+  margin: 20px;
+  color: white !important;
+  box-shadow: 0px 0px 20px rgba(46, 139, 87, 0.6);
+}
+
+.f-reservacia-btn:hover{
+    font-size: 110%;
+}
+
+.f-i-icon{
+  margin: 0px 5px !important;
+}
+
+footer p,
+footer a,
+footer li,
+footer span {
+    color: rgba(255, 255, 255, 0.7) !important;
+    text-decoration: none !important;
+}
 
 @keyframes fadeIn {
   from {opacity: 0;}
@@ -84,4 +448,35 @@ html{
   .carousel-caption p {
     font-size: 1rem;
   }
+}
+
+@media(max-width: 991.98px){
+  .navbar-transparent:has(.navbar-collapse.show){
+    background-color: white !important;
+  }
+
+  .navbar-transparent:has(.navbar-collapse.show) .nav-link {
+    color: #222 !important;
+  }
+
+  .navbar-transparent:has(.navbar-collapse.show) .bg-success .nav-link{
+    color: white !important
+  }
+
+  .navbar-transparent:has(.navbar-collapse.show) .navbar-toggler-icon {
+    filter:none;
+  }
+}
+
+@media (max-width: 576px) {
+    .gallery-filters {
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+    .gallery-button {
+        width: 25%;
+        padding: 7px 5px !important;
+        font-size: 14px;
+    }
 }

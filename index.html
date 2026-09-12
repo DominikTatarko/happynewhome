@@ -18,84 +18,84 @@
 </head>
 <body>
     <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a href="index.html">
-                <img src="obrzaky/logo.jpg" alt="Logo" width="60" height="60" style="border-radius: 50%;">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <!-- Jazykové prepínače -->
-                        <a class="nav-link active" href="#" id="flag-en" aria-current="page">
-                            <span class="fi fi-gb"></span>
-                        </a>
-                        <a class="nav-link active d-none" href="#" id="flag-sk" aria-current="page">
-                            <span class="fi fi-sk"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html" data-i18n="navbar_domov" id="nav-home">Domov</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="galeria.html" data-i18n="navbar_galeria" id="nav-gallery">Galéria</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="okolie.html" data-i18n="navbar_galeria" id="nav-gallery">Okolie</a>
-                    </li>
-                    <li class="nav-item bg-success px-2 mx-2" style="border-radius: 20px;">
-                        <a class="nav-link text-white text-center" href="rezervacia.html" data-i18n="navbar_rezervovat">Rezervovať</a>
-                    </li>
-                </ul>
+        <nav class="navbar navbar-expand-lg navbar-transparent">
+            <div class="container-fluid">
+                <a href="index.html">
+                    <img src="obrzaky/logo.jpg" alt="Logo" width="60" height="60" style="border-radius: 50%;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <!-- Jazykové prepínač -->
+                            <a class="nav-link active" href="#" id="flag-en" aria-current="page">
+                                <span class="fi fi-gb"></span>
+                            </a>
+                            <a class="nav-link active d-none" href="#" id="flag-sk" aria-current="page">
+                                <span class="fi fi-sk"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html" data-i18n="navbar_domov" id="nav-home">Domov</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="galeria.html" data-i18n="navbar_galeria" id="nav-gallery">Galéria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="okolie.html" data-i18n="navbar_galeria" id="nav-gallery">Okolie</a>
+                        </li>
+                        <li class="nav-item bg-success px-2 mx-2" style="border-radius: 20px;">
+                            <a style="color: white" class="nav-link text-white text-center" href="rezervacia.html" data-i18n="navbar_rezervovat">Rezervovať</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- Hero Carousel -->
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active hero-slide" style="background-image: url('obrzaky/hlavnafotka.jpg');">
-                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
-                    <h1 data-i18n="hero_slide1_h1">Vitajte u nás</h1>
-                    <p data-i18n="hero_slide1_p">Vaša spokojnosť je našou prioritou</p>
-                    <div class="row">
-                        <div class="col-12  col-md-6 d-grid p-2">
-                            <a href="rezervacia.html" data-i18n="navbar_rezervovat" class="btn btn-success m-1" style="border-radius: 20px;" data-i18n="hero_rezervovat">Rezervovať</a>
+        <!-- Hero Carousel -->
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('obrzaky/hlavnafotka.jpg');">
+                    <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+                        <h1 data-i18n="hero_slide1_h1">Chata Happynewhome</h1>
+                        <p data-i18n="hero_slide1_p">Vaša spokojnosť je našou prioritou</p>
+                        <div class="row">
+                            <div class="col-12  col-md-6 d-grid p-2">
+                                <a href="rezervacia.html" data-i18n="navbar_rezervovat" class="btn btn-success m-1 hero-reservation-btn" style="border-radius: 20px;" data-i18n="hero_rezervovat">Rezervovať</a>
+                            </div>
+                            <div class="col-12 col-md-6 d-grid p-2">
+                                <a href="galeria.html" data-i18n="navbar_galeria" class="btn btn-secondary m-1" style="border-radius: 20px;" data-i18n="hero_galeria">Galéria</a>
+                            </div>
                         </div>
+                    </div>
+                </div>
+                <div class="carousel-item hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('obrzaky/vedlajsiafotka.jpeg');">
+                    <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+                        <h1 data-i18n="hero_slide2_h1">Chata Happynewhome</h1>
+                        <p data-i18n="hero_slide2_p">Luxusná chata v srdci Slovenského raja</p>
+                        <div class="row">
+                            <div class="col-12 col-md-6 d-grid p-2">
+                                <a href="rezervacia.html" data-i18n="navbar_rezervovat" class="btn btn-success m-1 hero-reservation-btn" style="border-radius: 20px;" data-i18n="hero_rezervovat">Rezervovať</a>
+                            </div>
                         <div class="col-12 col-md-6 d-grid p-2">
-                            <a href="galeria.html" data-i18n="navbar_galeria" class="btn btn-primary m-1" style="border-radius: 20px;" data-i18n="hero_galeria">Galéria</a>
+                            <a href="galeria.html" data-i18n="navbar_galeria" class="btn btn-secondary m-1" style="border-radius: 20px;" data-i18n="hero_galeria">Galéria</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="carousel-item hero-slide" style="background-image: url('obrzaky/vedlajsiafotka.jpeg');">
+            <div class="carousel-item hero-slide" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),  url('obrzaky/hlavnafotkatri.jpeg');">
                 <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
-                    <h1 data-i18n="hero_slide2_h1">Pohodlie ako doma</h1>
-                    <p data-i18n="hero_slide2_p">Miesto, kde sa stretáva rodina aj teplo domova.</p>
-                    <div class="row">
-                        <div class="col-12 col-md-6 d-grid p-2">
-                            <a href="rezervacia.html" data-i18n="navbar_rezervovat" class="btn btn-success m-1" style="border-radius: 20px;" data-i18n="hero_rezervovat">Rezervovať</a>
-                        </div>
-                        <div class="col-12 col-md-6 d-grid p-2">
-                            <a href="galeria.html" data-i18n="navbar_galeria" class="btn btn-primary m-1" style="border-radius: 20px;" data-i18n="hero_galeria">Galéria</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item hero-slide" style="background-image: url('obrzaky/hlavnafotkatri.jpeg');">
-                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
-                    <h1 data-i18n="hero_slide3_h1">Pohodlie ako doma</h1>
+                    <h1 data-i18n="hero_slide3_h1">Chata Happynewhome</h1>
                     <p data-i18n="hero_slide3_p">Miesto, kde sa stretáva rodina aj teplo domova.</p>
                     <div class="row">
                         <div class="col-12 col-md-6 d-grid p-2">
-                            <a href="rezervacia.html" data-i18n="navbar_rezervovat" class="btn btn-success m-1" style="border-radius: 20px;" data-i18n="hero_rezervovat">Rezervovať</a>
+                            <a href="rezervacia.html" data-i18n="navbar_rezervovat" class="btn btn-success m-1 hero-reservation-btn" style="border-radius: 20px;" data-i18n="hero_rezervovat">Rezervovať</a>
                         </div>
                         <div class="col-12 col-md-6 d-grid p-2">
-                            <a href="galeria.html" data-i18n="navbar_galeria" class="btn btn-primary m-1" style="border-radius: 20px;" data-i18n="hero_galeria">Galéria</a>
+                            <a href="galeria.html" data-i18n="navbar_galeria" class="btn btn-secondary m-1" style="border-radius: 20px;" data-i18n="hero_galeria">Galéria</a>
                         </div>
                     </div>
                 </div>
@@ -103,10 +103,10 @@
         </div>
 
         <!-- Carousel Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <button class="carousel-control-prev " type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <button class="carousel-control-next " type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
         </button>
     </div>
@@ -114,120 +114,342 @@
 
 
 
-    <section class="opis p-5">
+    <section class="opis" style="padding-top: 30px">
         <div class="container" style="max-width: 800px;">
-            <h1 class="text-center" data-i18n="sekcia_opis_nadpis">O ubytovaní</h1>
-            <p class="py-3" data-i18n="sekcia_opis_text">
-                🌲 Hnilčík, situovaný v srdci nádherného Slovenského raja, je ideálnym miestom pre rodiny s deťmi, ktoré hľadajú pokoj a prírodu.<br>
-                🌲Okolie ponúka množstvo turistických trás vedúcich cez malebné rokliny a kaňony, nádherné panoramatické výhľady ako napríklad Tomášovský výhľad, či možnosť plavby na kanoe po rieke Hornád.<br>
-                🌲 Pre milovníkov prírody sú tu tiež skvelé podmienky na cykloturistiku a hubárčenie.<br>
-                🌲 Hnilčík s bohatou baníckou históriou navyše ponúka individuálne prehliadky banských štôlní a návštevu banské múzea, ktoré vás prenesú do dávnych čias baníctva v tejto oblasti.</p>
+            <div style="width: 25%;  justify-self: center;">
+                <h2 class="text-center" data-i18n="sekcia_opis_nadpis">
+                    O Chate
+                </h2>
+                <div style="border: solid 3px #198754  ; border-radius: 10px; "></div>
+    
+            </div>
+            
+            <p class="py-3" data-i18n="sekcia_opis_text" style="font-weight: 100; font-size: 1.2rem;">
+                Chata HappyNewHome ponúka dokonale spojený luxus s tichom Slovenského raja. Nachádza sa v malebnej obci Hnilčík a je vytvorená pre každého, kto si chce oddýchnuť od každodenného zhonu.<br>
+                Vychutnajte si rannú kávu na terase s výhľadom na lesy, načerpajte energiu v privátnej kúpacej kadi a večer zakončite pri rozpálenom krbe. Chata poskytuje pohodlie pre 4 až 8 osôb počas celého roka.            
+            </p>
+        </div>
+    </section>
+
+    <section class="vybavenie" style="padding-bottom: 50px">
+        <div class="container text-center">
+            <div class="row g-4">
+                <div class="col-md-2 col-6">
+                    <div class="bg-light box-style">
+                        <div class="row icon-style"><i class="bi bi-people"></i></div>
+                        <div class="row"><p class="p-2 text-center" data-i18n="vybavenie_kapacita" style="font-size: 0.9rem;">Kapacita osôb - 8</p></div>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-6">
+                    <div class=" bg-light box-style">
+                        <div class="row icon-style" ><i class="bi bi-wifi"></i></div>
+                        <div class="row"><p class="p-2 text-center" data-i18n="vybavenie_wifi" style="font-size: 0.9rem;">Wi-Fi</p></div>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-6">
+                    <div class="bg-light box-style">
+                        <div class="row icon-style"><i class="bi bi-cup-hot" ></i></div>
+                        <div class="row"><p class="p-2 text-center" data-i18n="vybavenie_kuchyna" style="font-size: 0.9rem;">Plne vybavená kuchyňa</p></div>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-6">
+                    <div class="bg-light box-style">
+                        <div class="row icon-style"><i class="bi bi-droplet"></i></div>
+                        <div class="row"><p class="p-2 text-center" data-i18n="vybavenie_virivka" style="font-size: 0.9rem;">Vírivka</p></div>
+                    </div>
+                </div>
+                
+                <div class="col-md-2 col-6">
+                    <div class=" bg-light box-style ">
+                        <div class="row icon-style"><i class="bi bi-fire"></i></div>
+                        <div class="row"><p class="p-2 text-center" data-i18n="vybavenie_krb" style="font-size: 0.9rem;">Otočný krb</p></div>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-6">
+                    <div class=" bg-light box-style">
+                        <div class="row icon-style"><i class="bi bi-car-front"></i></div>
+                        <div class="row"><p class="p-2 text-center" data-i18n="vybavenie_parkovanie" style="font-size: 0.9rem;">Parkovanie pri objekte</p></div>
+                    </div>
+                </div>
+                
+            </div>
         </div>
     </section>
     
     <!-- Sekcia s fotkami a tlačidlom -->
-    <section class="gallery-preview py-5">
-  <div class="container">
-    <h3 class="text-center mb-4" data-i18n="pozrite_si_fotky">Pozrite si fotky našej chaty</h3>
-    <div class="row">
-    <div class="col-6 col-md-3 col-lg-3  p-2">
-                <a href="obrzaky/galeria_101.jpeg" data-lightbox="gallery" data-title="Pohľad 1">
-                <img src="obrzaky/galeria_101.jpeg" class="img-fluid rounded gallery-img fade-in" alt="Pohľad 1">
-            </a>
-        </div>
+    <section class="gallery-preview" style="padding: 50px 0px">
+        <div class="container">
 
-        <div class="col-6 col-md-3 col-lg-3  p-2">
-            <a href="obrzaky/galeria_11.jpeg" data-lightbox="gallery" data-title="Pohľad 2">
-                <img src="obrzaky/galeria_11.JPG" class="img-fluid rounded gallery-img fade-in" alt="Pohľad 2">
-            </a>
-        </div>
+            <h3 class="text-center mb-4" data-i18n="pozrite_si_fotky" style="padding-bottom: 20px">
+                Pozrite si fotky našej chaty
+            </h3>
 
-        <div class="col-6 col-md-3 col-lg-3  p-2">
-            <a href="obrzaky/galeria_3.jpeg" data-lightbox="gallery" data-title="Pohľad 2">
-                <img src="obrzaky/galeria_3.jpeg" class="img-fluid rounded gallery-img fade-in" alt="Pohľad 2">
-            </a>
+            <div class="slider">
+                <div class="slide-track">
+                    <!-- Prvá sada-->
+                    <div class="slide">
+                        <a href="obrzaky/galeria_101.jpeg"
+                            data-lightbox="gallery"
+                            data-title="Pohľad 1">
+                            <img src="obrzaky/galeria_101.jpeg"
+                                 class="gallery-img"
+                                alt="Pohľad 1">
+                        </a>
+                    </div>
+
+                    <div class="slide">
+                        <a href="obrzaky/galeria_11.jpeg"
+                            data-lightbox="gallery"
+                            data-title="Pohľad 2">
+                            <img src="obrzaky/galeria_11.JPG"
+                                class="gallery-img"
+                                alt="Pohľad 2">
+                        </a>
+                    </div>
+
+                    <div class="slide">
+                        <a href="obrzaky/galeria_3.jpeg"
+                            data-lightbox="gallery"
+                            data-title="Pohľad 3">
+                            <img src="obrzaky/galeria_3.jpeg"
+                                class="gallery-img"
+                                alt="Pohľad 3">
+                        </a>
+                    </div>
+
+                    <div class="slide">
+                        <a href="obrzaky/vedlajsiafotka.jpeg"
+                            data-lightbox="gallery"
+                            data-title="Pohľad 4">
+                            <img src="obrzaky/vedlajsiafotka.jpeg"
+                                class="gallery-img"
+                                alt="Pohľad 4">
+                        </a>
+                    </div>
+                    
+                    <!-- Druhá sada-->
+                    <div class="slide">
+                        <a href="obrzaky/galeria_101.jpeg"
+                            data-lightbox="gallery"
+                            data-title="Pohľad 1">
+                            <img src="obrzaky/galeria_101.jpeg"
+                                 class="gallery-img"
+                                alt="Pohľad 1">
+                        </a>
+                    </div>
+
+                    <div class="slide">
+                        <a href="obrzaky/galeria_11.jpeg"
+                            data-lightbox="gallery"
+                            data-title="Pohľad 2">
+                            <img src="obrzaky/galeria_11.JPG"
+                                class="gallery-img"
+                                alt="Pohľad 2">
+                        </a>
+                    </div>
+
+                    <div class="slide">
+                        <a href="obrzaky/galeria_3.jpeg"
+                            data-lightbox="gallery"
+                            data-title="Pohľad 3">
+                            <img src="obrzaky/galeria_3.jpeg"
+                                class="gallery-img"
+                                alt="Pohľad 3">
+                        </a>
+                    </div>
+
+                    <div class="slide">
+                        <a href="obrzaky/vedlajsiafotka.jpeg"
+                            data-lightbox="gallery"
+                            data-title="Pohľad 4">
+                            <img src="obrzaky/vedlajsiafotka.jpeg"
+                                class="gallery-img"
+                                alt="Pohľad 4">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        <div class="text-center mt-4">
+                <a href="galeria.html"
+                    class="btn btn-success f-galeria-btn"
+                    style="border-radius: 20px;"
+                    data-i18n="pozriet_galeriu">
+                    Pozrieť galériu
+                </a>
+            </div>
+
         </div>
-        <div class="col-6 col-md-3 col-lg-3 p-2">
-            <a href="obrzaky/vedlajsiafotka.jpeg" data-lightbox="gallery" data-title="Pohľad 2">
-                <img src="obrzaky/vedlajsiafotka.jpeg" class="img-fluid rounded gallery-img fade-in" alt="Pohľad 2">
-            </a>
-        </div>
-    </div>
-    <div class="text-center mt-4">
-      <a href="galeria.html" class="btn btn-outline-primary" style="border-radius: 20px;" data-i18n="pozriet_galeriu">Pozrieť galériu</a>
-    </div>
-  </div>
     </section>
 
+    <section class="bg-light " style="padding: 50px 0px">
+        <div class="container">
+        <div style="width: 25%;  justify-self: center;">
+            <h1 class="text-center" data-i18n="sekcia_opis_nadpis">
+                Cenník
+            </h1>
+            <div style="border: solid 3px #198754  ; border-radius: 10px; margin-bottom: 30px; "></div>
+        </div>
+        <div class="row g-4 p-2">
+            <div class="col-6 col-md-4">
+                <div class="box-style cenovka-box" style="height: 170px;">
+                    <h4>Mimosezónu</h4>
+                    <p><span class="cenovka">150€</span>/noc</p>
+                    <p>Za celú chatu / noc, pobyt od 2 nocí</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="box-style cenovka-box" style="height: 170px;">
+                    <h4>Letná sezonna</h4>
+                    <p><span class="cenovka">150€</span>/noc</p>
+                    <p>2026-07-01 – 2026-08-31</p>
+                    <p>Za celú chatu / noc, pobyt od 2 nocí</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="box-style cenovka-box" style="height: 170px;">
+                    <h4>Zimná sezonna</h4>
+                    <p><span class="cenovka">150€</span>/noc</p>
+                    <p>2026-12-01 – 2027-04-01</p>
+                    <p>Za celú chatu / noc, pobyt od 2 nocí</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="box-style cenovka-box" style="height: 170px;">
+                    <h4>Sylvester</h4>
+                    <p><span class="cenovka">150€</span>/noc</p>
+                    <p>2026-12-29 – 2027-01-03</p>
+                    <p>Za celú chatu / noc, pobyt od 4 nocí</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="box-style cenovka-box" style="height: 170px;">
+                    <h4>Vianoce</h4>
+                    <p ><span class="cenovka">150€</span>/noc</p>
+                    <p>2026-12-23 – 2026-12-29</p>
+                    <p>Za celú chatu / noc, pobyt od 4 nocí</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4">
+                <div class="box-style cenovka-box" style="height: 170px;">
+                    <h4>Veľká Noc</h4>
+                    <p><span class="cenovka">150€</span>/noc</p>
+                    <p>2027-04-02 – 2027-04-06</p>
+                    <p>Za celú chatu / noc, pobyt od 4 nocí</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
     
-    <section class="vybavenie p-5 bg-light">
-  <div class="container text-center">
-    <h2 data-i18n="vybavenie_nadpis">Vybavenie</h2>
-    <p class="py-2" data-i18n="vybavenie_text">Ponúkame všetko, čo potrebujete pre pohodlný a nezabudnuteľný pobyt:</p>
+    <section class="calendar">
+        <div class="container">
 
-    <div class="row">
-      <div class="col-md-3 col-6">
-        <div class="row"><i class="bi bi-people" style="font-size: 3rem;"></i></div>
-        <div class="row"><p class="p-2 text-center" data-i18n="vybavenie_kapacita">Kapacita osôb - 8</p></div>
-      </div>
-      <div class="col-md-3 col-6">
-        <div class="row"><i class="bi bi-wifi" style="font-size: 3rem;"></i></div>
-        <div class="row"><p class="p-2 text-center" data-i18n="vybavenie_wifi">Wi-Fi</p></div>
-      </div>
-      <div class="col-md-3 col-6">
-        <div class="row"><i class="bi bi-cup-hot" style="font-size: 3rem;"></i></div>
-        <div class="row"><p class="p-2 text-center" data-i18n="vybavenie_kuchyna">Plne vybavená kuchyňa</p></div>
-      </div>
-      <div class="col-md-3 col-6">
-        <div class="row"><i class="bi bi-droplet" style="font-size: 3rem;"></i></div>
-        <div class="row"><p class="p-2 text-center" data-i18n="vybavenie_virivka">Vírivka</p></div>
-      </div>
-    </div>
+                    <div class="calendar-container">
 
-    <div class="row mt-4">
-      <div class="col-md-3 col-6">
-        <div class="row"><i class="bi bi-fire" style="font-size: 3rem;"></i></div>
-        <div class="row"><p class="p-2 text-center" data-i18n="vybavenie_krb">Otočný krb</p></div>
-      </div>
-      <div class="col-md-3 col-6">
-        <div class="row"><i class="bi bi-arrow-repeat" style="font-size: 3rem;"></i></div>
-        <div class="row"><p class="p-2 text-center" data-i18n="vybavenie_pracka">Práčka so sušičkou</p></div>
-      </div>
-      <div class="col-md-3 col-6">
-        <div class="row"><i class="bi bi-tv" style="font-size: 3rem;"></i></div>
-        <div class="row"><p class="p-2 text-center" data-i18n="vybavenie_tv">Smart TV</p></div>
-      </div>
-      <div class="col-md-3 col-6">
-        <div class="row"><i class="bi bi-car-front" style="font-size: 3rem;"></i></div>
-        <div class="row"><p class="p-2 text-center" data-i18n="vybavenie_parkovanie">Parkovanie pri objekte</p></div>
-      </div>
-    </div>
-  </div>
-</section>
+                        <h2 class="calendar-heading">
+                            Dostupnosť
+                        </h2>
+
+                        <p class="calendar-description">
+                            Vyberte si termín pobytu.
+                            Červené dni sú obsadené.
+                        </p>
 
 
-    <section class="okolie p-5 bg-light">
+                        <div class="calendar-box">
+
+                            <!-- Flatpickr -->
+                            <input
+                                type="text"
+                                id="calendar"
+                                class="d-none"
+                            >
+
+
+                            <!-- Legenda -->
+
+                            <div class="calendar-legend">
+
+                                <div class="legend-item">
+
+                                    <span
+                                        class="legend-color legend-free"
+                                    ></span>
+
+                                    Voľné
+
+                                </div>
+
+
+                                <div class="legend-item">
+
+                                    <span
+                                        class="legend-color legend-booked"
+                                    ></span>
+
+                                    Obsadené
+
+                                </div>
+
+
+                                <div class="legend-item">
+
+                                    <span
+                                        class="legend-color legend-selected"
+                                    ></span>
+
+                                    Vybraný termín
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+        </div>
+    </section>
+
+
+<section class="okolie p-5 bg-light">
         <div class="text-center mb-4">
             <h2 class="fw-bold" data-i18n="okolie_nadpis">Okolie</h2>
             <p class="text-muted" data-i18n="okolie_podnadpis">Typy na vylet v okolí 30km</p> 
         </div> 
         <div>   
             <div class="container text-center">
-                <div class="row align-items-center shadow-sm rounded bg-white overflow-hidden mb-4">
-                    <div class="col-md-6 p-4">
-                        <h3 class="fw-semibold" data-i18n="okolie_ski_nazov">Ski Centrum Mraznica</h3>
-                        <p class="text-primary mb-1" data-i18n="okolie_ski_cas"><i class="bi bi-geo-alt-fill me-2"></i>3 min autom</p>
-                        <p data-i18n="okolie_ski_popis">Zažite pohodové lyžovanie v srdci prírody! Mraznica ponúka skvelé podmienky pre rodiny aj rekreačných lyžiarov, s krásnymi výhľadmi a občerstvením priamo pri svahu. V lete je svah ideálny na prechádzky či cyklovýlety.</p>
-                        <button type="button" style="border-radius: 20px;" data-i18n="okolie_viac_info" class="btn btn-outline-primary mt-3"
-                            onclick="window.open('https://www.google.com/maps/place/Horsk%C3%A1+chata+Mraznica/@48.8554725,20.5648191,433m/data=!3m2!1e3!4b1!4m6!3m5!1s0x473e4c4e10a1b019:0x5debd76bf202be4a!8m2!3d48.855469!4d20.567394!16s%2Fg%2F1trppkjj?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D', '_blank')">
-                            Viac info<i class="bi bi-arrow-right ms-1"></i>
-                        </button>                    </div>
-                    <div class="col-md-6 p-0">
-                        <img src="obrzaky/ski_centrummarznica.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Ski Centrum Mraznica">
+                <div class="row">
+                    <div class="row align-items-center shadow-sm rounded bg-white overflow-hidden mb-4">
+                        <div class="col-md-6 p-4">
+                            <h3 class="fw-semibold" data-i18n="okolie_ski_nazov">Ski Centrum Mraznica</h3>
+                            <p class="text-primary mb-1" data-i18n="okolie_ski_cas"><i class="bi bi-geo-alt-fill me-2"></i>3 min autom</p>
+                            <p data-i18n="okolie_ski_popis">Zažite pohodové lyžovanie v srdci prírody! Mraznica ponúka skvelé podmienky pre rodiny aj rekreačných lyžiarov, s krásnymi výhľadmi a občerstvením priamo pri svahu. V lete je svah ideálny na prechádzky či cyklovýlety.</p>
+                            <button type="button" style="border-radius: 20px;" data-i18n="okolie_viac_info" class="btn btn-outline-primary mt-3"
+                                onclick="window.open('https://www.google.com/maps/place/Horsk%C3%A1+chata+Mraznica/@48.8554725,20.5648191,433m/data=!3m2!1e3!4b1!4m6!3m5!1s0x473e4c4e10a1b019:0x5debd76bf202be4a!8m2!3d48.855469!4d20.567394!16s%2Fg%2F1trppkjj?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D', '_blank')">
+                                Viac info<i class="bi bi-arrow-right ms-1"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-6 p-0">
+                            <img src="obrzaky/ski_centrummarznica.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Ski Centrum Mraznica">
+                        </div>
                     </div>
-                </div>
 
-                <!-- Palcmanská Maša -->
+                
                 <div class="row align-items-center shadow-sm rounded bg-white overflow-hidden mb-4">
                     
                     <div class="col-md-6 p-4">
@@ -244,7 +466,7 @@
                     </div>
                 </div>
 
-                <!-- Dobšinská ľadová jaskyňa -->
+                
                 <div class="row align-items-center shadow-sm rounded bg-white overflow-hidden mb-4">
                     <div class="col-md-6 p-4">
                         <h3 class="fw-semibold" data-i18n="okolie_dobsinska_nazov">Dobšinská ľadová jaskyňa</h3>
@@ -258,34 +480,70 @@
                         <img src="obrzaky/ladova_jaskyna.webp" class="img-fluid w-100 h-100 object-fit-cover" alt="Demäňovská Jaskyňa">
                     </div>
                 </div>
-
-                <button class="btn btn-primary" style="border-radius: 20px;" data-i18n="okolie_dalsie_moznosti" ><a href="okolie.html" class="nav-link">Ďalšie možností</a></button>
-
+                </div>
             </div>
-
             
         </div>
 
     </section>
 
+    <section class="recenzie"></section>
 
-
-    <footer class="bg-dark text-light py-4">
-    <div class="container text-center">
-        <p class="mb-1">📍 Hnilčík, Slovenský raj | 📧 chatahappyhome@gmail.com | 📞 +421 987 654 321</p>
-        <ul class="nav justify-content-center mb-2">
-            <li class="nav-item"><a href="index.html" class="nav-link text-light px-2" data-i18n="footer_nav_home">Home</a></li>
-            <li class="nav-item"><a href="galeria.html" class="nav-link text-light px-2" data-i18n="footer_nav_gallery">Gallery</a></li>
-            <li class="nav-item"><a href="rezervacia.html" class="nav-link text-light px-2" data-i18n="footer_nav_rezervacia">Rezervovať</a></li>
-        </ul>
-        <div class="mb-2">
-            <a href="https://www.instagram.com/chata_happynewhome/" class="text-light me-3">
-                <i class="bi bi-instagram"></i>
-            </a>
+    <footer class="bg-dark text-light py-4" style="margin-top: 30px;">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-6 col-12  f-rychle-odkazy" style="padding: 20px;" >
+        <h4>
+            Odkazy
+        </h4>
+        
+            <ul>
+                <li class="nav-item"><a href="index.html" class="nav-link text-light px-2" data-i18n="footer_nav_home">Home</a></li>
+                <li class="nav-item"><a href="galeria.html" class="nav-link text-light px-2" data-i18n="footer_nav_gallery">Gallery</a></li>
+                <li class="nav-item"><a href="rezervacia.html" class="nav-link text-light px-2" data-i18n="footer_nav_rezervacia">Rezervovať</a></li>
+            </ul>
+        
         </div>
-        <p class="mb-0 small">© 2025 HappyNewHome. All rights reserved.</p>
+        <div class="col-md-6 col-12  f-info" style="padding: 20px;">
+            <h4>
+                Kde nas najdete
+            </h4>
+            <div class="mb-2" style="margin: 0px 10px">
+
+            <p class="mb-1">
+                <i class="bi bi-geo-alt-fill f-i-icon"></i>
+                Hnilčík 250, 053 32 Hnilčík, Slovensko
+            </p>
+
+            <p class="mb-1">
+            <i class="bi bi-envelope-fill f-i-icon"></i>
+                chatahappyhome@gmail.com
+            </p>
+
+            <p class="mb-1">
+                <i class="bi bi-telephone-fill f-i-icon"></i>
+                +421 904 266 152
+        </p>
+
+        <a href="https://www.instagram.com/chata_happynewhome/" class="text-light me-3" style="display: flex; align-items: center;">
+            <i class="bi bi-instagram f-i-icon"></i>
+            <span>chappynewhome</span>
+        </a>
+
+        </div>
+        </div>   
+    </div> 
+</div>
+    <div class="container f-reservacia-block style="padding: 20px;" >
+        <h4>Rezervácia</h4>
+        <p>Máte zaujem o nezbudnuteľny pobyt. Neváhajte a zarezervujte si izbu</p>
+        <li class="nav-item bg-success f-reservacia-btn" style="border-radius: 20px; padding: 10px;">
+            <a style="color: white" class="nav-link text-white text-center" href="rezervacia.html" data-i18n="navbar_rezervovat">Rezervovať</a>
+        </li>
+        <div style="border: grey; width: 100%;"></div>
+        <p class="mb-0 small" style="text-align: center; border-top: gray solid 1px; padding: 20px 5px 5px 0px;">© 2025 HappyNewHome. All rights reserved.</p>
     </div>
-</footer>
+    </footer>
 
 
   <script  src="lang.js"></script>

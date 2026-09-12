@@ -1,4 +1,4 @@
-
+// Card animation
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".card-fadein");
 
@@ -14,6 +14,23 @@ document.addEventListener("DOMContentLoaded", () => {
   cards.forEach(card => observer.observe(card));
 });
 
-  
+// Gallery buttons
+document.addEventListener("DOMContentLoaded", () => {
+
+    const buttons = document.querySelectorAll(".gallery-button");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+
+            buttons.forEach(btn => {
+                btn.classList.remove("gallery-checked");
+            });
+
+            button.classList.add("gallery-checked");
+
+        });
+    });
+
+});
   
 

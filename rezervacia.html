@@ -1,142 +1,1239 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HappyNewHome</title>
-    <link rel="stylesheet" href="style.css">
+
+    <title>Rezervácia | HappyNewHome</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+        crossorigin="anonymous"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    >
+
+    <!-- Flag Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css"
+    >
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manuale:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Flatpickr -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    >
+
+    <!-- Tvoje CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =====================================================
+           REZERVÁCIA
+        ===================================================== */
+
+        .reservation-section {
+            min-height: calc(100vh - 76px);
+            background: #f5f6f4;
+            padding: 70px 0;
+        }
+
+        .reservation-title {
+            font-family: "Manuale", serif;
+            font-size: 3rem;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #26352b;
+        }
+
+        .reservation-wrapper {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+        }
+
+
+        /* =====================================================
+           KALENDÁR
+        ===================================================== */
+
+        .calendar-container {
+            padding: 45px;
+            background: #fafbf9;
+            height: 100%;
+        }
+
+        .calendar-heading {
+            font-family: "Manuale", serif;
+            font-size: 1.8rem;
+            color: #26352b;
+            margin-bottom: 10px;
+        }
+
+        .calendar-description {
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        .calendar-box {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Flatpickr */
+
+        .flatpickr-calendar {
+            width: 100% !important;
+            max-width: none !important;
+            box-shadow: none !important;
+            border: none !important;
+            background: transparent !important;
+        }
+
+        .flatpickr-days,
+        .flatpickr-rContainer,
+        .flatpickr-innerContainer {
+          width: 100% !important;
+        }
+
+        .dayContainer {
+          width: 100% !important;
+          max-width: none !important;
+          min-width: 100% !important;
+        }
+
+        .flatpickr-months {
+            margin-bottom: 15px;
+        }
+
+        .flatpickr-month {
+            color: #26352b;
+        }
+
+        .flatpickr-current-month {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .flatpickr-weekdays {
+            background: transparent;
+        }
+
+        span.flatpickr-weekday {
+            color: #777;
+            font-weight: 600;
+        }
+
+        .flatpickr-day {
+            width: calc(14.285% - 4px)!important;
+            max-width: none !important;
+        }
+
+        .flatpickr-day:hover {
+            background: #dce8dd;
+            border-color: #dce8dd;
+        }
+
+        .flatpickr-day.selected,
+        .flatpickr-day.startRange,
+        .flatpickr-day.endRange {
+            background: #3f7047 !important;
+            border-color: #3f7047 !important;
+        }
+
+        .flatpickr-day.inRange {
+            background: #dce8dd !important;
+            border-color: #dce8dd !important;
+            box-shadow: none !important;
+        }
+
+        /* Obsadené dni */
+
+        .flatpickr-day.booked {
+            background: #e8b4b4 !important;
+            border-color: #e8b4b4 !important;
+            color: #8b2e2e !important;
+            text-decoration: line-through;
+            cursor: not-allowed !important;
+        }
+
+        .flatpickr-day.booked:hover {
+            background: #e8b4b4 !important;
+            border-color: #e8b4b4 !important;
+        }
+
+
+        /* =====================================================
+           LEGENDA
+        ===================================================== */
+
+        .calendar-legend {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .legend-free {
+            background: #ffffff;
+            border: 2px solid #3f7047;
+        }
+
+        .legend-booked {
+            background: #e8b4b4;
+        }
+
+        .legend-selected {
+            background: #3f7047;
+        }
+
+
+        /* =====================================================
+           FORMULÁR
+        ===================================================== */
+
+        .form-container {
+            padding: 45px;
+        }
+
+        .form-title {
+            font-family: "Manuale", serif;
+            font-size: 2rem;
+            color: #26352b;
+            margin-bottom: 30px;
+        }
+
+        .form-label {
+            font-weight: 500;
+            color: #3d493f;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            padding: 12px 14px;
+            border: 1px solid #d8ddd8;
+        }
+
+        .form-control:focus {
+            border-color: #3f7047;
+            box-shadow: 0 0 0 0.2rem rgba(63, 112, 71, 0.15);
+        }
+
+        .selected-date-box {
+            background: #f3f7f3;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .selected-date-box strong {
+            color: #3f7047;
+        }
+
+        .reservation-button {
+            background: #3f7047;
+            border: none;
+            border-radius: 12px;
+            padding: 14px;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .reservation-button:hover {
+            background: #315b38;
+            transform: translateY(-1px);
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 991px) {
+
+            .reservation-section {
+                padding: 40px 15px;
+            }
+
+            .reservation-title {
+                font-size: 2.3rem;
+                margin-bottom: 30px;
+            }
+
+            .calendar-container,
+            .form-container {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 575px) {
+
+            .reservation-title {
+                font-size: 2rem;
+            }
+
+            .calendar-container,
+            .form-container {
+                padding: 22px;
+            }
+
+            .calendar-box {
+                background: transparent;
+                border-radius: 0;
+                padding: 0;
+                width: 100%;
+                box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+            }
+
+            .calendar-legend {
+                gap: 12px;
+            }
+        }
+
+    </style>
 
 </head>
+
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
         <div class="container-fluid">
+
             <a href="index.html">
-                <img src="obrzaky/logo.jpg" alt="Logo" width="60" height="60" style="border-radius: 50%;">
+                <img
+                    src="obrzaky/logo.jpg"
+                    alt="Logo"
+                    width="60"
+                    height="60"
+                    style="border-radius: 50%;"
+                >
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+
+            <div
+                class="collapse navbar-collapse"
+                id="navbarNavDropdown"
+            >
+
                 <ul class="navbar-nav ms-auto">
+
+
+                    <!-- Jazyk -->
                     <li class="nav-item">
-                        <!-- Jazykové prepínače -->
-                        <a class="nav-link active" href="#" id="flag-en" aria-current="page">
+
+                        <a
+                            class="nav-link active"
+                            href="#"
+                            id="flag-en"
+                            aria-current="page"
+                        >
                             <span class="fi fi-gb"></span>
                         </a>
-                        <a class="nav-link active d-none" href="#" id="flag-sk" aria-current="page">
+
+                        <a
+                            class="nav-link active d-none"
+                            href="#"
+                            id="flag-sk"
+                            aria-current="page"
+                        >
                             <span class="fi fi-sk"></span>
                         </a>
+
                     </li>
+
+
+                    <!-- Domov -->
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html" data-i18n="navbar_domov" id="nav-home">Domov</a>
+
+                        <a
+                            class="nav-link active"
+                            href="index.html"
+                            data-i18n="navbar_domov"
+                            id="nav-home"
+                        >
+                            Domov
+                        </a>
+
                     </li>
+
+
+                    <!-- Galéria -->
                     <li class="nav-item">
-                        <a class="nav-link active" href="galeria.html" data-i18n="navbar_galeria" id="nav-gallery">Galéria</a>
+
+                        <a
+                            class="nav-link active"
+                            href="galeria.html"
+                            data-i18n="navbar_galeria"
+                            id="nav-gallery"
+                        >
+                            Galéria
+                        </a>
+
                     </li>
+
+
+                    <!-- Okolie -->
                     <li class="nav-item">
-                        <a class="nav-link active" href="okolie.html" data-i18n="navbar_galeria" id="nav-gallery">Okolie</a>
+
+                        <a
+                            class="nav-link active"
+                            href="okolie.html"
+                            data-i18n="navbar_okolie"
+                        >
+                            Okolie
+                        </a>
+
                     </li>
-                    <li class="nav-item bg-success px-2 mx-2" style="border-radius: 20px;">
-                        <a class="nav-link text-white text-center" href="rezervacia.html" data-i18n="navbar_rezervovat">Rezervovať</a>
+
+
+                    <!-- Rezervovať -->
+                    <li
+                        class="nav-item bg-success px-2 mx-2"
+                        style="border-radius: 20px;"
+                    >
+
+                        <a
+                            class="nav-link text-white text-center"
+                            href="rezervacia.html"
+                            data-i18n="navbar_rezervovat"
+                        >
+                            Rezervovať
+                        </a>
+
                     </li>
+
                 </ul>
+
             </div>
+
         </div>
+
     </nav>
-    </header>
-    <section class="reservation py-5 bg-light">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-6 col-md-8">
-        <form action="https://formsubmit.co/dominiktatarkocr7@gmail.com" method="POST" class="p-4 border rounded shadow bg-white">
-          <h2 class="text-center mb-4" data-i18n="rezervacia_pobytu">Rezervácia pobytu</h2>
 
-          <div class="mb-3">
-            <label for="name" class="form-label" data-i18n="meno">Meno</label>
-            <input type="text" name="name" id="name" class="form-control" placeholder="Vaše meno" required>
-          </div>
+</header>
 
-          <div class="mb-3">
-            <label for="email" class="form-label" data-i18n="email">Email</label>
-            <input type="email" name="email" id="email" class="form-control" placeholder="vaš@email.com" required>
-          </div>
 
-          <div class="mb-3">
-            <label for="telefon" class="form-label" data-i18n="telefonne_cislo">Telefónne číslo</label>
-            <input type="tel" id="telefon" name="telefon" class="form-control" pattern="[0-9+ ]{8,15}" required>
-          </div>
 
-          <!-- Dátum -->
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label for="datumOd" class="form-label" data-i18n="datum_prichodu">Dátum príchodu</label>
-              <input type="date" id="datumOd" name="datum_prichodu" class="form-control" required>
+<!-- =====================================================
+     REZERVÁCIA
+===================================================== -->
+
+<section class="reservation-section">
+
+    <div class="container">
+
+        <h1
+            class="reservation-title"
+            data-i18n="rezervacia_pobytu"
+        >
+            Rezervácia pobytu
+        </h1>
+
+
+        <div class="reservation-wrapper">
+
+            <div class="row g-0">
+
+
+                <!-- =================================================
+                     ĽAVÁ STRANA – KALENDÁR
+                ================================================== -->
+
+                <div class="col-lg-6">
+
+                    <div class="calendar-container">
+
+                        <h2 class="calendar-heading">
+                            Dostupnosť
+                        </h2>
+
+                        <p class="calendar-description">
+                            Vyberte si termín pobytu.
+                            Červené dni sú obsadené.
+                        </p>
+
+
+                        <div class="calendar-box">
+
+                            <!-- Flatpickr -->
+                            <input
+                                type="text"
+                                id="calendar"
+                                class="d-none"
+                            >
+
+
+                            <!-- Legenda -->
+
+                            <div class="calendar-legend">
+
+                                <div class="legend-item">
+
+                                    <span
+                                        class="legend-color legend-free"
+                                    ></span>
+
+                                    Voľné
+
+                                </div>
+
+
+                                <div class="legend-item">
+
+                                    <span
+                                        class="legend-color legend-booked"
+                                    ></span>
+
+                                    Obsadené
+
+                                </div>
+
+
+                                <div class="legend-item">
+
+                                    <span
+                                        class="legend-color legend-selected"
+                                    ></span>
+
+                                    Vybraný termín
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PRAVÁ STRANA – FORMULÁR
+                ================================================== -->
+
+                <div class="col-lg-6">
+
+                    <div class="form-container">
+
+                        <h2
+                            class="form-title"
+                            data-i18n="rezervacia_pobytu"
+                        >
+                            Rezervácia pobytu
+                        </h2>
+
+
+                        <!-- Vybraný termín -->
+
+                        <div class="selected-date-box">
+
+                            <div>
+                                Príchod:
+                                <strong id="selectedArrival">
+                                    —
+                                </strong>
+                            </div>
+
+                            <div>
+                                Odchod:
+                                <strong id="selectedDeparture">
+                                    —
+                                </strong>
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- FORM -->
+
+                        <form
+                            action="https://formsubmit.co/dominiktatarkocr7@gmail.com"
+                            method="POST"
+                        >
+
+
+                            <!-- Meno -->
+
+                            <div class="mb-3">
+
+                                <label
+                                    for="name"
+                                    class="form-label"
+                                    data-i18n="meno"
+                                >
+                                    Meno
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    class="form-control"
+                                    placeholder="Vaše meno"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <!-- Email -->
+
+                            <div class="mb-3">
+
+                                <label
+                                    for="email"
+                                    class="form-label"
+                                    data-i18n="email"
+                                >
+                                    Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    class="form-control"
+                                    placeholder="vas@email.com"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <!-- Telefón -->
+
+                            <div class="mb-3">
+
+                                <label
+                                    for="telefon"
+                                    class="form-label"
+                                    data-i18n="telefonne_cislo"
+                                >
+                                    Telefónne číslo
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="telefon"
+                                    name="telefon"
+                                    class="form-control"
+                                    pattern="[0-9+ ]{8,15}"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <!-- DÁTUMY -->
+
+                            <div class="row mb-3">
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="datumOd"
+                                        class="form-label"
+                                        data-i18n="datum_prichodu"
+                                    >
+                                        Dátum príchodu
+                                    </label>
+
+                                    <input
+                                        type="date"
+                                        id="datumOd"
+                                        name="datum_prichodu"
+                                        class="form-control"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="datumDo"
+                                        class="form-label"
+                                        data-i18n="datum_odchodu"
+                                    >
+                                        Dátum odchodu
+                                    </label>
+
+                                    <input
+                                        type="date"
+                                        id="datumDo"
+                                        name="datum_odchodu"
+                                        class="form-control"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- OSOBY -->
+
+                            <div class="row mb-3">
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="dospeli"
+                                        class="form-label"
+                                        data-i18n="dospeli"
+                                    >
+                                        Dospelí
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="dospeli"
+                                        name="dospeli"
+                                        class="form-control"
+                                        min="1"
+                                        max="8"
+                                        value="1"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="deti"
+                                        class="form-label"
+                                        data-i18n="deti"
+                                    >
+                                        Deti
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="deti"
+                                        name="deti"
+                                        class="form-control"
+                                        min="0"
+                                        max="8"
+                                        value="0"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- POZNÁMKA -->
+
+                            <div class="mb-3">
+
+                                <label
+                                    for="message"
+                                    class="form-label"
+                                    data-i18n="poznamka"
+                                >
+                                    Poznámka
+                                </label>
+
+                                <textarea
+                                    name="message"
+                                    id="message"
+                                    rows="3"
+                                    class="form-control"
+                                    placeholder="Napíšte poznámku..."
+                                ></textarea>
+
+                            </div>
+
+
+
+                            <!-- FORMSUBMIT -->
+
+                            <input
+                                type="hidden"
+                                name="_captcha"
+                                value="false"
+                            >
+
+                            <input
+                                type="hidden"
+                                name="_next"
+                                value="https://dominiktatarko.github.io/happynewhome/thankyou.html"
+                            >
+
+
+                            <!-- ODOSLAŤ -->
+
+                            <button
+                                type="submit"
+                                class="btn btn-success reservation-button w-100"
+                                data-i18n="odoslat_rezervaciu"
+                            >
+                                Odoslať rezerváciu
+                            </button>
+
+
+                        </form>
+
+                    </div>
+
+                </div>
+
             </div>
-            <div class="col-md-6">
-              <label for="datumDo" class="form-label" data-i18n="datum_odchodu">Dátum odchodu</label>
-              <input type="date" id="datumDo" name="datum_odchodu" class="form-control" required>
-            </div>
-          </div>
 
-          <div class="row mb-3">
-            <div class="col-md-6">
-              <label for="dospeli" class="form-label" data-i18n="dospeli">Dospelí</label>
-              <input type="number" id="dospeli" name="dospeli" class="form-control" min="1" max="8" required>
-            </div>
-            <div class="col-md-6">
-              <label for="deti" class="form-label" data-i18n="deti">Deti</label>
-              <input type="number" id="deti" name="deti" class="form-control" min="0" max="8">
-            </div>
-          </div>
+        </div>
 
-          <div class="mb-3">
-            <label for="message" class="form-label" data-i18n="poznamka">Poznámka (voliteľné)</label>
-            <textarea name="message" id="message" rows="3" class="form-control" placeholder="Napíšte poznámku..."></textarea>
-          </div>
-
-          <!-- FormSubmit hidden fields -->
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://dominiktatarko.github.io/happynewhome/thankyou.html">
-
-          <button type="submit" class="btn btn-primary w-100" data-i18n="odoslat_rezervaciu">Odoslať rezerváciu</button>
-        </form>
-      </div>
     </div>
-  </div>
-    </section>
-    <footer class="bg-dark text-light py-4">
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="bg-dark text-light py-4">
+
     <div class="container text-center">
-        <p class="mb-1">📍 Hnilčík, Slovenský raj | 📧 chatahappyhome@gmail.com | 📞 +421 987 654 321</p>
+
+        <p class="mb-1">
+            📍 Hnilčík, Slovenský raj |
+            📧 chatahappyhome@gmail.com |
+            📞 +421 987 654 321
+        </p>
+
+
         <ul class="nav justify-content-center mb-2">
-            <li class="nav-item"><a href="index.html" class="nav-link text-light px-2" data-i18n="footer_nav_home">Home</a></li>
-            <li class="nav-item"><a href="galeria.html" class="nav-link text-light px-2" data-i18n="footer_nav_gallery">Gallery</a></li>
-            <li class="nav-item"><a href="rezervacia.html" class="nav-link text-light px-2" data-i18n="footer_nav_rezervacia">Rezervovať</a></li>
+
+            <li class="nav-item">
+                <a
+                    href="index.html"
+                    class="nav-link text-light px-2"
+                    data-i18n="footer_nav_home"
+                >
+                    Home
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a
+                    href="galeria.html"
+                    class="nav-link text-light px-2"
+                    data-i18n="footer_nav_gallery"
+                >
+                    Gallery
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a
+                    href="rezervacia.html"
+                    class="nav-link text-light px-2"
+                    data-i18n="footer_nav_rezervacia"
+                >
+                    Rezervovať
+                </a>
+            </li>
+
         </ul>
+
+
         <div class="mb-2">
-            <a href="https://www.instagram.com/chata_happynewhome/" class="text-light me-3">
+
+            <a
+                href="https://www.instagram.com/chata_happynewhome/"
+                class="text-light me-3"
+            >
                 <i class="bi bi-instagram"></i>
             </a>
+
         </div>
-        <p class="mb-0 small">© 2025 HappyNewHome. All rights reserved.</p>
+
+
+        <p class="mb-0 small">
+            © 2025 HappyNewHome. All rights reserved.
+        </p>
+
     </div>
+
 </footer>
-    <!-- Bootstrap Bundle (JS) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Flatpickr JS -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-     <script  src="lang.js"></script>
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<!-- Bootstrap -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"
+></script>
+
+
+<!-- Flatpickr -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+<!-- Tvoj language systém -->
+<script src="lang.js"></script>
+
+
+
+<script>
+
+    /* =====================================================
+       OBSADENÉ DÁTUMY
+       
+       ZATIAĽ TESTOVACIE ÚDAJE.
+       Neskôr ich nahradíme údajmi z iCal.
+    ===================================================== */
+
+    const bookedDates = [
+
+        "2026-08-28",
+        "2026-08-29",
+        "2026-08-30",
+
+        "2026-09-05",
+        "2026-09-06",
+        "2026-09-07",
+
+        "2026-09-18",
+        "2026-09-19",
+        "2026-09-20"
+
+    ];
+
+
+
+    /* =====================================================
+       ELEMENTY
+    ===================================================== */
+
+    const calendarInput = document.getElementById("calendar");
+
+    const arrivalInput = document.getElementById("datumOd");
+
+    const departureInput = document.getElementById("datumDo");
+
+    const selectedArrival =
+        document.getElementById("selectedArrival");
+
+    const selectedDeparture =
+        document.getElementById("selectedDeparture");
+
+
+
+    /* =====================================================
+       KONTROLA OBSADENÉHO DŇA
+    ===================================================== */
+
+    function isBooked(date) {
+
+        const dateString =
+            date.getFullYear() +
+            "-" +
+            String(date.getMonth() + 1).padStart(2, "0") +
+            "-" +
+            String(date.getDate()).padStart(2, "0");
+
+        return bookedDates.includes(dateString);
+
+    }
+
+
+
+    /* =====================================================
+       FORMÁT DÁTUMU
+    ===================================================== */
+
+    function formatDate(date) {
+
+        const day =
+            String(date.getDate()).padStart(2, "0");
+
+        const month =
+            String(date.getMonth() + 1).padStart(2, "0");
+
+        const year =
+            date.getFullYear();
+
+        return `${day}.${month}.${year}`;
+
+    }
+
+
+
+    /* =====================================================
+       KALENDÁR
+    ===================================================== */
+
+    const calendar = flatpickr(calendarInput, {
+
+        mode: "range",
+
+        inline: true,
+
+        dateFormat: "Y-m-d",
+
+        minDate: "today",
+
+        showMonths: 1,
+
+        monthSelectorType: "static",
+
+        disabledMobile: true,
+
+        disable: [
+
+            function(date) {
+
+                return isBooked(date);
+
+            }
+
+        ],
+
+
+        onDayCreate: function(
+            dObj,
+            dStr,
+            fp,
+            dayElem
+        ) {
+
+            if (isBooked(dayElem.dateObj)) {
+
+                dayElem.classList.add("booked");
+
+                dayElem.setAttribute(
+                    "title",
+                    "Tento termín je obsadený"
+                );
+
+            }
+
+        },
+
+
+        onChange: function(
+            selectedDates
+        ) {
+
+            if (selectedDates.length === 1) {
+
+                const arrival =
+                    selectedDates[0];
+
+                selectedArrival.textContent =
+                    formatDate(arrival);
+
+                arrivalInput.value =
+                    arrival.toISOString()
+                    .split("T")[0];
+
+                selectedDeparture.textContent =
+                    "Vyberte odchod";
+
+                departureInput.value = "";
+
+            }
+
+
+            if (selectedDates.length === 2) {
+
+                const arrival =
+                    selectedDates[0];
+
+                const departure =
+                    selectedDates[1];
+
+
+                selectedArrival.textContent =
+                    formatDate(arrival);
+
+                selectedDeparture.textContent =
+                    formatDate(departure);
+
+
+                arrivalInput.value =
+                    arrival.toISOString()
+                    .split("T")[0];
+
+                departureInput.value =
+                    departure.toISOString()
+                    .split("T")[0];
+
+            }
+
+        }
+
+    });
+
+
+
+    /* =====================================================
+       ZABRÁNENIE VÝBERU TERMÍNU CEZ FORMULÁR,
+       KTORÝ OBSAHUJE OBSADENÉ DNI
+    ===================================================== */
+
+    function rangeContainsBookedDate(
+        start,
+        end
+    ) {
+
+        let current =
+            new Date(start);
+
+        while (current <= end) {
+
+            if (isBooked(current)) {
+
+                return true;
+
+            }
+
+            current.setDate(
+                current.getDate() + 1
+            );
+
+        }
+
+        return false;
+
+    }
+
+
+
+    /* =====================================================
+       VALIDÁCIA FORMULÁRA
+    ===================================================== */
+
+    document
+        .querySelector("form")
+        .addEventListener(
+            "submit",
+            function(event) {
+
+                const arrival =
+                    arrivalInput.value;
+
+                const departure =
+                    departureInput.value;
+
+
+                if (!arrival || !departure) {
+
+                    event.preventDefault();
+
+                    alert(
+                        "Prosím, vyberte dátum príchodu a odchodu."
+                    );
+
+                    return;
+
+                }
+
+
+                const start =
+                    new Date(arrival);
+
+                const end =
+                    new Date(departure);
+
+
+                if (
+                    rangeContainsBookedDate(
+                        start,
+                        end
+                    )
+                ) {
+
+                    event.preventDefault();
+
+                    alert(
+                        "Vybraný termín obsahuje obsadený deň. Vyberte prosím iný termín."
+                    );
+
+                }
+
+            }
+        );
+
 </script>
+
 </body>
 </html>

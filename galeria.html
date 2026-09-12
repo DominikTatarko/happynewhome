@@ -18,59 +18,96 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a href="index.html">
-                <img src="obrzaky/logo.jpg" alt="Logo" width="60" height="60" style="border-radius: 50%;">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <!-- Jazykové prepínače -->
-                        <a class="nav-link active" href="#" id="flag-en" aria-current="page">
-                            <span class="fi fi-gb"></span>
-                        </a>
-                        <a class="nav-link active d-none" href="#" id="flag-sk" aria-current="page">
-                            <span class="fi fi-sk"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html" data-i18n="navbar_domov" id="nav-home">Domov</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="galeria.html" data-i18n="navbar_galeria" id="nav-gallery">Galéria</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="okolie.html" data-i18n="navbar_galeria" id="nav-gallery">Okolie</a>
-                    </li>
-                    <li class="nav-item bg-success px-2 mx-2" style="border-radius: 20px;">
-                        <a class="nav-link text-white text-center" href="rezervacia.html" data-i18n="navbar_rezervovat">Rezervovať</a>
-                    </li>
-                </ul>
-            </div>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1f2321;">
+    <div class="container-fluid">
+        <a href="index.html" class="navbar-brand">
+            Chata HappyNewHome
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" id="flag-en">
+                        <span class="fi fi-gb"></span>
+                    </a>
+
+                    <a class="nav-link active d-none" href="#" id="flag-sk">
+                        <span class="fi fi-sk"></span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html"
+                       data-i18n="navbar_domov" id="nav-home">
+                        Domov
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="galeria.html"
+                       data-i18n="navbar_galeria" id="nav-gallery">
+                        Galéria
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="okolie.html"
+                       data-i18n="navbar_galeria" id="nav-gallery">
+                        Okolie
+                    </a>
+                </li>
+
+                <li class="nav-item bg-success px-2 mx-2" style="border-radius: 20px; box-shadow: none;">
+                    <a class="nav-link text-white text-center"
+                       href="rezervacia.html"
+                       data-i18n="navbar_rezervovat">
+                        Rezervovať
+                    </a>
+                </li>
+
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
     </header>
     <section>
         <div class="container my-5">
             <h2 data-i18n="navbar_galeria" class="text-center mb-4" >Galéria</h2>
             <div class="row g-3">
 
+            <div class="container text-center" >
+                <div class="gallery-filters">
+                    <a class="btn btn-secondary gallery-button gallery-checked">Všetko</a>
+                    <a class="btn btn-secondary gallery-button">Interiér</a>
+                    <a class="btn btn-secondary gallery-button">Exteriér</a>
+                    <a class="btn btn-secondary gallery-button">Okolie</a>
+                </div>
+            </div>
+            
+
             <div class="col-6 col-md-4 col-lg-3">
                 <a href="obrzaky/galeria_1.jpeg" data-lightbox="gallery" data-title="Pohľad 1">
-                <img src="obrzaky/galeria_1.jpeg" class="img-fluid rounded gallery-img fade-in" alt="Pohľad 1" loading="lazy">
-            </a>
-        </div>
+                    <img src="obrzaky/galeria_1.jpeg" class="img-fluid rounded gallery-img fade-in" alt="Pohľad 1" loading="lazy">
+                </a>
+             </div>
 
-        <div class="col-6 col-md-4 col-lg-3">
-            <a href="obrzaky/galeria_2.jpeg" data-lightbox="gallery" data-title="Pohľad 2">
-                <img src="obrzaky/galeria_2.jpeg" class="img-fluid rounded gallery-img fade-in" alt="Pohľad 2" loading="lazy">
-            </a>
-        </div>
+        
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <a href="obrzaky/galeria_2.jpeg" data-lightbox="gallery" data-title="Pohľad 2">
+                    <img src="obrzaky/galeria_2.jpeg" class="img-fluid rounded gallery-img fade-in" alt="Pohľad 2" loading="lazy">
+                </a>
+            </div>
 
         <div class="col-6 col-md-4 col-lg-3">
             <a href="obrzaky/galeria_3.jpeg" data-lightbox="gallery" data-title="Pohľad 3">
@@ -209,19 +246,62 @@
         </div>
     </section>
 <footer class="bg-dark text-light py-4">
-    <div class="container text-center">
-        <p class="mb-1">📍 Hnilčík, Slovenský raj | 📧 chatahappyhome@gmail.com | 📞 +421 987 654 321</p>
-        <ul class="nav justify-content-center mb-2">
-            <li class="nav-item"><a href="index.html" class="nav-link text-light px-2" data-i18n="footer_nav_home">Home</a></li>
-            <li class="nav-item"><a href="galeria.html" class="nav-link text-light px-2" data-i18n="footer_nav_gallery">Gallery</a></li>
-            <li class="nav-item"><a href="rezervacia.html" class="nav-link text-light px-2" data-i18n="footer_nav_rezervacia">Rezervovať</a></li>
-        </ul>
-        <div class="mb-2">
-            <a href="https://www.instagram.com/chata_happynewhome/" class="text-light me-3">
-                <i class="bi bi-instagram"></i>
-            </a>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-4 col-12  f-rychle-odkazy" style="padding: 20px;" >
+        <h4>
+            Odkazy
+        </h4>
+        
+            <ul>
+                <li class="nav-item"><a href="index.html" class="nav-link text-light px-2" data-i18n="footer_nav_home">Domov</a></li>
+                <li class="nav-item"><a href="galeria.html" class="nav-link text-light px-2" data-i18n="footer_nav_gallery">Galéria</a></li>
+                <li class="nav-item"><a href="rezervacia.html" class="nav-link text-light px-2" data-i18n="footer_nav_rezervacia">Rezervovať</a></li>
+            </ul>
+        
         </div>
-        <p class="mb-0 small">© 2025 HappyNewHome. All rights reserved.</p>
+        <div class="col-md-4 col-12  f-info" style="padding: 20px;">
+            <h4>
+                Kde nás najdete
+            </h4>
+            <div class="mb-2" style="margin: 0px 10px">
+
+            <p class="mb-1">
+                <i class="bi bi-geo-alt-fill f-i-icon"></i>
+                Hnilčík 250, 053 32 Hnilčík, Slovensko
+            </p>
+
+            <p class="mb-1">
+            <i class="bi bi-envelope-fill f-i-icon"></i>
+                chatahappyhome@gmail.com
+            </p>
+
+            <p class="mb-1">
+                <i class="bi bi-telephone-fill f-i-icon"></i>
+                +421 904 266 152
+        </p>
+
+        <a href="https://www.instagram.com/chata_happynewhome/" class="text-light me-3" style="display: flex; align-items: center;">
+            <i class="bi bi-instagram f-i-icon"></i>
+            <span>chappynewhome</span>
+        </a>
+
+        </div>
+        </div>  
+        <div class="col-md-4 col-12" style="padding:20px">
+            <h4>Rezervácia</h4>
+            <p>Máte zaujem o nezbudnuteľny pobyt? Neváhajte a zarezervujte si izbu</p>
+            <li class="nav-item bg-success f-reservacia-btn" style="border-radius: 20px; padding: 10px;">
+                <a style="color: white" class="nav-link text-white text-center" href="rezervacia.html" data-i18n="navbar_rezervovat">Rezervovať</a>
+            </li>
+        <div style="border: grey; width: 100%;"></div>
+    </div> 
+    </div> 
+
+    
+    </div>
+    <div class="container f-reservacia-block style="padding: 20px;" >
+        <p class="mb-0 small" style="text-align: center; border-top: gray solid 1px; padding: 20px 5px 5px 0px;">© 2025 HappyNewHome. All rights reserved.</p>
     </div>
 </footer>
 
@@ -229,6 +309,7 @@
     
     
     <script  src="lang.js"></script>
+    <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 </body>
 </html>
